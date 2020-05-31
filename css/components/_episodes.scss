@@ -1,6 +1,14 @@
 #episodes {
-  @extend %blue-section;
+  transform: skewY(-5deg);
   margin-top: 60px;
   padding-top: 10%;
   padding-bottom: 30%;
+
+  .container {
+    transform: skewY(5deg);
+  }
+
+  iframe {
+    margin-bottom: 10px;
+  }
 }

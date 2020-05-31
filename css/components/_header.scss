@@ -1,6 +1,12 @@
 header {
   padding-top: 50px;
 
+  .button {
+    @extend %button;
+    text-align: center;
+    line-height: 48px;
+  }
+
   #strike {
     text-decoration: line-through;
   }

@@ -19,7 +19,9 @@
   <body>
     <header>
       <nav>
-        <img src="images/logo.svg" alt="logo-img" />
+        <a href="#home">
+          <img src="images/logo.svg" alt="logo-img" />
+        </a>
         <label for="toggle"><i class="fas fa-bars"></i></label>
         <input type="checkbox" name="toggle" id="toggle" />
         <ul class="menu">
@@ -49,12 +51,18 @@
           todos los jueves cada 15 días.
         </p>
 
-        <button>CONOCE MÁS</button>
+        <a
+          class="button"
+          href="https://github.com/justanindieguy"
+          target="_blank"
+        >
+          CONOCE MÁS
+        </a>
       </section>
     </header>
 
     <main>
-      <section class="skew-section colored-section" id="episodes">
+      <section class="colored-section" id="episodes">
         <div class="container">
           <h2>Episodios</h2>
           <div class="grid">
@@ -176,7 +184,7 @@
         </div>
       </section>
 
-      <section class="skew-section colored-section" id="news">
+      <section class="colored-section" id="news">
         <div class="container">
           <h2>¿Querés las últimas novedades?</h2>
           <button>ESCUCHÁ LOS EPISODIOS</button>
@@ -192,11 +200,25 @@
 
         <div>
           <p>
-            <i class="fab fa-spotify"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-telegram"></i>
+            <a href="https://www.spotify.com/" target="_blank">
+              <i class="fab fa-spotify"></i>
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.twitter.com/" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://www.telegram.org/" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
           </p>
         </div>
       </div>
