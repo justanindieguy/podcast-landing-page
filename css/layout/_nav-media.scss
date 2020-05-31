@@ -1,0 +1,23 @@
+@include for-desktop {
+  nav {
+    padding: 3% 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    label {
+      display: none;
+    }
+
+    .menu {
+      display: block;
+      width: auto;
+    }
+
+    li {
+      display: inline;
+      margin: 0 20px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@include for-desktop {
+  #topics {
+    padding: 50px 15%;
+
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      padding: 30px;
+    }
+
+    .topic {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include for-tablet {
+  #topics {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

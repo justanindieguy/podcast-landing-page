@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pale Blue Dot</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ffb10cf2f6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="images/logo.svg" alt="logo-img" />
+        <label for="toggle"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" name="toggle" id="toggle" />
+        <ul class="menu">
+          <li>
+            <a href="#episodes">EPISODIOS</a>
+          </li>
+          <li>
+            <a href="#about">NOSOTROS</a>
+          </li>
+          <li>
+            <a href="#guests">ENTREVISTAS</a>
+          </li>
+          <li>
+            <a href="#topics">TÓPICOS</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section id="home">
+        <h1>
+          Hello <span id="strike">World</span> pale blue dot<span id="dot"
+            >.</span
+          >
+        </h1>
+        <p>
+          Un podcast que explora el mundo de la programación. Nuevos episodios,
+          todos los jueves cada 15 días.
+        </p>
+
+        <button>CONOCE MÁS</button>
+      </section>
+    </header>
+
+    <main>
+      <section class="skew-section colored-section" id="episodes">
+        <div class="container">
+          <h2>Episodios</h2>
+          <div class="grid">
+            <iframe
+              src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt"
+              width="100%"
+              height="232"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+
+            <iframe
+              src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt"
+              width="100%"
+              height="232"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+
+            <iframe
+              src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD"
+              width="100%"
+              height="232"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+
+            <iframe
+              src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ"
+              width="100%"
+              height="232"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="flex">
+          <img class="block-img" src="images/phone.png" alt="phone-img" />
+          <div class="column">
+            <h2>De dónde venimos</h2>
+            <p>
+              Our posturings, our imagined self-importance, the delusion that
+              we have some privileged position in the Universe, are challenged
+              by this point of pale light.
+            </p>
+
+            <p>
+              Our planet is a lonely speck in the great enveloping cosmic dark.
+              In our obscurity, in all this vastness, there is no hint that
+              help will come from elsewhere to save us from ourselves.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="guests">
+        <h2>Invitadas/os estelares</h2>
+        <div class="grid">
+          <img
+            class="block-img"
+            src="images/grace-hopper.png"
+            alt="grace-hopper-img"
+          />
+
+          <img
+            class="block-img"
+            src="images/Katie-Bouman.png"
+            alt="katie-bouman-img"
+          />
+
+          <img
+            class="block-img"
+            src="images/Margaret_Hamilton.png"
+            alt="margaret-hamilton-img"
+          />
+
+          <img class="block-img" src="images/univac.png" alt="univac-img" />
+
+          <img class="block-img" src="images/eniac.png" alt="eniac-img" />
+
+          <img
+            class="block-img"
+            src="images/susan-kare.png"
+            alt="susan-kare-img"
+          />
+        </div>
+      </section>
+
+      <section id="topics">
+        <h2>Algunos de nuestros temas</h2>
+
+        <div class="grid">
+          <div class="topic">
+            <img src="images/icon1.svg" alt="icon1-img" />
+            <h3>Trabajo remoto</h3>
+          </div>
+
+          <div class="topic">
+            <img src="images/icon2.svg" alt="icon2-img" />
+            <h3>Repensando la programación</h3>
+          </div>
+
+          <div class="topic">
+            <img src="images/icon3.svg" alt="icon3-img" />
+            <h3>Bases del código</h3>
+          </div>
+
+          <div class="topic">
+            <img src="images/icon4.svg" alt="icon4-img" />
+            <h3>Seguridad informática</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="skew-section colored-section" id="news">
+        <div class="container">
+          <h2>¿Querés las últimas novedades?</h2>
+          <button>ESCUCHÁ LOS EPISODIOS</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div>
+          <p>&copy; 2020- Hello blue pale dot</p>
+        </div>
+
+        <div>
+          <p>
+            <i class="fab fa-spotify"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-telegram"></i>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

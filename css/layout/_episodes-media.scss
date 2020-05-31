@@ -1,0 +1,27 @@
+@include for-desktop {
+  #episodes {
+    margin-top: 0;
+    padding: 5% 8% 10%;
+
+    .grid {
+      gap: 50px;
+    }
+  }
+}
+
+@include for-tablet {
+  #episodes {
+    padding: 5% 5% 15%;
+
+    .grid {
+      gap: 20px;
+    }
+  }
+}
+
+#episodes {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}

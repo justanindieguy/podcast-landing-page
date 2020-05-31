@@ -1,0 +1,19 @@
+@include for-desktop {
+  section {
+    padding: 5% 15%;
+  }
+
+  .grid {
+    display: grid;
+  }
+}
+
+@include for-tablet {
+  section {
+    padding: 5% 15%;
+  }
+
+  .grid {
+    display: grid;
+  }
+}

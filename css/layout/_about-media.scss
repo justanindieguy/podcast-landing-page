@@ -1,0 +1,40 @@
+@include for-desktop {
+  #about {
+    padding-bottom: 0;
+
+    img {
+      transform: translateY(-60px);
+      width: 50%;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .column {
+      padding-left: 50px;
+      width: 50%;
+    }
+  }
+}
+
+@include for-tablet {
+  #about {
+    transform: translateY(-100px);
+
+    img {
+      display: inline;
+    }
+
+    .flex {
+      text-align: center;
+    }
+
+    .column {
+      text-align: left;
+    }
+  }
+}

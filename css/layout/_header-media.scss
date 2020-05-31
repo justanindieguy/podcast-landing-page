@@ -1,0 +1,17 @@
+@include for-desktop {
+  #home {
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 0;
+    }
+
+    p {
+      width: 628px;
+    }
+
+    button {
+      width: 226px;
+      margin-top: 75px;
+    }
+  }
+}
