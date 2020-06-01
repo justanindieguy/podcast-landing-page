@@ -28,6 +28,17 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #00f3bb;
+  text-decoration: line-through;
+}
+
+a:active {
+  color: #060a24;
+  opacity: 56%;
+  text-decoration: line-through;
+}
+
 button, header .button {
   background-color: #00f3bb;
   border: none;
@@ -38,6 +49,12 @@ button, header .button {
   font-weight: 600;
   height: 48px;
   width: 100%;
+}
+
+button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#00f0b8), to(#0000fe));
+  background: linear-gradient(90deg, #00f0b8 0%, #0000fe 100%);
+  color: white;
 }
 
 section {
@@ -75,7 +92,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  text-align: center;
+  text-align: left;
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -84,6 +101,25 @@ nav {
   height: 50px;
   width: 100%;
   z-index: 1;
+}
+
+nav span {
+  background-color: black;
+  display: block;
+  height: 3px;
+  width: 25px;
+  position: fixed;
+  top: 15px;
+  right: 17px;
+  margin-bottom: 4px;
+}
+
+nav #bar-center {
+  top: 22px;
+}
+
+nav #bar-bottom {
+  top: 29px;
 }
 
 nav img {
@@ -98,7 +134,21 @@ nav label {
 }
 
 nav input[type="checkbox"] {
-  display: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+}
+
+nav input[type="checkbox"]:focus {
+  outline: 0;
 }
 
 nav .menu {
@@ -106,7 +156,7 @@ nav .menu {
   list-style: none;
   margin: 0;
   overflow: hidden;
-  padding: 0;
+  padding: 0 5%;
   width: 100%;
 }
 
@@ -114,22 +164,47 @@ nav li {
   display: block;
 }
 
-#toggle:checked + .menu {
-  background-color: white;
+#toggle:checked ~ .menu {
+  background-color: #0000ec;
   display: block;
   position: absolute;
   left: 0;
   top: 50px;
 }
 
-#toggle:checked + .menu {
+#toggle:checked ~ .menu {
   -webkit-animation: 0.5s linear expand;
           animation: 0.5s linear expand;
 }
 
-#toggle:checked + .menu li {
-  padding: 30px 0;
-  border-bottom: 1px solid #dadada;
+#toggle:checked ~ .menu li {
+  padding: 20px 0;
+  color: white;
+}
+
+#toggle:checked ~ .menu a {
+  color: white;
+}
+
+#toggle:checked ~ #bar-top {
+  -webkit-animation: 0.5s linear bar-top-move;
+          animation: 0.5s linear bar-top-move;
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle:checked ~ #bar-center {
+  -webkit-animation: 0.5s linear disappear;
+          animation: 0.5s linear disappear;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+}
+
+#toggle:checked ~ #bar-bottom {
+  -webkit-animation: 0.5s linear bar-bottom-move;
+          animation: 0.5s linear bar-bottom-move;
+  -webkit-transform: rotate(-45deg) translate(5px, -5px);
+          transform: rotate(-45deg) translate(5px, -5px);
 }
 
 header {
@@ -139,6 +214,17 @@ header {
 header .button {
   text-align: center;
   line-height: 48px;
+}
+
+header .button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#00f0b8), to(#0000fe));
+  background: linear-gradient(90deg, #00f0b8 0%, #0000fe 100%);
+  color: white;
+  text-decoration: none;
+}
+
+header .button:active {
+  opacity: 100%;
 }
 
 header #strike {
@@ -215,6 +301,14 @@ footer i {
   margin: 0 15px;
 }
 
+footer a:hover {
+  text-decoration: none;
+}
+
+footer a:active {
+  text-decoration: none;
+}
+
 @media (min-width: 1120px) {
   section {
     padding: 5% 15%;
@@ -243,7 +337,10 @@ footer i {
     left: 0;
     right: 0;
   }
-  nav label {
+  nav span {
+    display: none;
+  }
+  nav input[type="checkbox"] {
     display: none;
   }
   nav .menu {
@@ -264,6 +361,9 @@ footer i {
   #home p {
     width: 628px;
     margin-bottom: 75px;
+  }
+  #home div {
+    display: inline;
   }
   #home .button {
     width: 226px;
@@ -417,7 +517,7 @@ footer i {
     height: 0;
   }
   100% {
-    height: 336px;
+    height: 252px;
   }
 }
 
@@ -426,7 +526,73 @@ footer i {
     height: 0;
   }
   100% {
-    height: 336px;
+    height: 252px;
+  }
+}
+
+@-webkit-keyframes disappear {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+@-webkit-keyframes bar-top-move {
+  0% {
+    -webkit-transform: rotate(0deg) translate(0, 0);
+            transform: rotate(0deg) translate(0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+
+@keyframes bar-top-move {
+  0% {
+    -webkit-transform: rotate(0deg) translate(0, 0);
+            transform: rotate(0deg) translate(0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+
+@-webkit-keyframes bar-bottom-move {
+  0% {
+    -webkit-transform: rotate(0deg) translate(0, 0);
+            transform: rotate(0deg) translate(0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(5px, -5px);
+            transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@keyframes bar-bottom-move {
+  0% {
+    -webkit-transform: rotate(0deg) translate(0, 0);
+            transform: rotate(0deg) translate(0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(5px, -5px);
+            transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 /*# sourceMappingURL=main.css.map */

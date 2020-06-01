@@ -3,7 +3,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
+  text-align: left;
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -12,6 +12,25 @@ nav {
   height: 50px;
   width: 100%;
   z-index: 1;
+
+  span {
+    background-color: black;
+    display: block;
+    height: 3px;
+    width: 25px;
+    position: fixed;
+    top: 15px;
+    right: 17px;
+    margin-bottom: 4px;
+  }
+
+  #bar-center {
+    top: 22px;
+  }
+
+  #bar-bottom {
+    top: 29px;
+  }
 
   img {
     display: block;
@@ -25,7 +44,19 @@ nav {
   }
 
   input[type="checkbox"] {
-    display: none;
+    appearance: none;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+  }
+
+  input[type="checkbox"]:focus {
+    outline: 0;
   }
 
   .menu {
@@ -33,7 +64,7 @@ nav {
     list-style: none;
     margin: 0;
     overflow: hidden;
-    padding: 0;
+    padding: 0 5%;
     width: 100%;
   }
 
@@ -42,8 +73,8 @@ nav {
   }
 }
 
-#toggle:checked + .menu {
-  background-color: white;
+#toggle:checked ~ .menu {
+  background-color: $blue-highlight;
   display: block;
   position: absolute;
   left: 0;
@@ -54,7 +85,32 @@ nav {
   }
 
   li {
-    padding: 30px 0;
-    border-bottom: 1px solid #dadada;
+    padding: 20px 0;
+    color: white;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+#toggle:checked ~ #bar-top {
+  & {
+    animation: 0.5s linear bar-top-move;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+
+#toggle:checked ~ #bar-center {
+  & {
+    animation: 0.5s linear disappear;
+    transform: translateX(50px);
+  }
+}
+
+#toggle:checked ~ #bar-bottom {
+  & {
+    animation: 0.5s linear bar-bottom-move;
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }

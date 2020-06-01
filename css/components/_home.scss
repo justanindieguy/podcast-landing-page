@@ -7,6 +7,16 @@ header {
     line-height: 48px;
   }
 
+  .button:hover {
+    background: $hover-gradient;
+    color: white;
+    text-decoration: none;
+  }
+
+  .button:active {
+    opacity: 100%;
+  }
+
   #strike {
     text-decoration: line-through;
   }

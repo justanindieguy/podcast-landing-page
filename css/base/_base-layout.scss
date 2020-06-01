@@ -27,6 +27,17 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #00f3bb;
+  text-decoration: line-through;
+}
+
+a:active {
+  color: #060a24;
+  opacity: 56%;
+  text-decoration: line-through;
+}
+
 %button {
   background-color: $button-color;
   border: none;
@@ -41,6 +52,11 @@ a {
 
 button {
   @extend %button;
+}
+
+button:hover {
+  background: $hover-gradient;
+  color: white;
 }
 
 section {

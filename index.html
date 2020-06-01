@@ -22,8 +22,19 @@
         <a href="#home">
           <img src="images/logo.svg" alt="logo-img" />
         </a>
-        <label for="toggle"><i class="fas fa-bars"></i></label>
+
+        <!--
+        <label for="toggle">
+          <div class="bar"></div>
+        </label>
+        -->
+
         <input type="checkbox" name="toggle" id="toggle" />
+
+        <span id="bar-top"></span>
+        <span id="bar-center"></span>
+        <span id="bar-bottom"></span>
+
         <ul class="menu">
           <li>
             <a href="#episodes">EPISODIOS</a>
@@ -42,9 +53,8 @@
 
       <section id="home">
         <h1>
-          Hello <span id="strike">World</span> pale blue dot<span id="dot"
-            >.</span
-          >
+          Hello <span id="strike">World</span>
+          <div>pale blue dot<span id="dot">.</span></div>
         </h1>
         <p>
           Un podcast que explora el mundo de la programación. Nuevos episodios,

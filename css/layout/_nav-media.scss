@@ -6,7 +6,11 @@
     left: 0;
     right: 0;
 
-    label {
+    span {
+      display: none;
+    }
+
+    input[type="checkbox"] {
       display: none;
     }
 
