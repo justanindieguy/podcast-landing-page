@@ -186,6 +186,14 @@ nav li {
   color: white;
 }
 
+#toggle:checked ~ .menu a:hover {
+  color: #00f3bb;
+}
+
+#toggle:checked ~ .menu a:active {
+  color: #d1d1d3;
+}
+
 #toggle:checked ~ #bar-top {
   -webkit-animation: 0.5s linear bar-top-move;
           animation: 0.5s linear bar-top-move;
@@ -345,7 +353,10 @@ footer a:active {
   }
   nav .menu {
     display: block;
-    width: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0;
   }
   nav li {
     display: inline;

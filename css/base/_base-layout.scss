@@ -28,12 +28,12 @@ a {
 }
 
 a:hover {
-  color: #00f3bb;
+  color: $anchor-hover;
   text-decoration: line-through;
 }
 
 a:active {
-  color: #060a24;
+  color: $anchor-active;
   opacity: 56%;
   text-decoration: line-through;
 }

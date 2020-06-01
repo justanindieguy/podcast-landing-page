@@ -92,6 +92,14 @@ nav {
   a {
     color: white;
   }
+
+  a:hover {
+    color: $anchor-hover;
+  }
+
+  a:active {
+    color: #d1d1d3;
+  }
 }
 
 #toggle:checked ~ #bar-top {
