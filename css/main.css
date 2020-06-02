@@ -39,7 +39,7 @@ a:active {
   text-decoration: line-through;
 }
 
-button, header .button {
+button, #home .button {
   background-color: #00f3bb;
   border: none;
   cursor: pointer;
@@ -215,31 +215,32 @@ nav li {
           transform: rotate(-45deg) translate(5px, -5px);
 }
 
-header {
-  padding-top: 50px;
+#home {
+  margin-top: 50px;
+  padding-top: 10px;
 }
 
-header .button {
+#home .button {
   text-align: center;
   line-height: 48px;
 }
 
-header .button:hover {
+#home .button:hover {
   background: -webkit-gradient(linear, left top, right top, from(#00f0b8), to(#0000fe));
   background: linear-gradient(90deg, #00f0b8 0%, #0000fe 100%);
   color: white;
   text-decoration: none;
 }
 
-header .button:active {
+#home .button:active {
   opacity: 100%;
 }
 
-header #strike {
+#home #strike {
   text-decoration: line-through;
 }
 
-header #dot {
+#home #dot {
   color: #0000ec;
 }
 
@@ -351,6 +352,9 @@ footer a:active {
   nav input[type="checkbox"] {
     display: none;
   }
+  nav img {
+    width: 36px;
+  }
   nav .menu {
     display: block;
     width: -webkit-max-content;
@@ -365,6 +369,10 @@ footer a:active {
 }
 
 @media (min-width: 1120px) {
+  #home {
+    margin-top: 76px;
+    padding-top: 80px;
+  }
   #home h1 {
     font-size: 4rem;
     margin-bottom: 0;
@@ -389,6 +397,9 @@ footer a:active {
   #episodes .grid {
     gap: 50px;
   }
+  #episodes iframe {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 700px) and (max-width: 1119px) {
@@ -398,10 +409,9 @@ footer a:active {
   #episodes .grid {
     gap: 20px;
   }
-}
-
-#episodes iframe {
-  margin-bottom: 0;
+  #episodes iframe {
+    margin-bottom: 0;
+  }
 }
 
 #episodes .grid {
@@ -498,7 +508,8 @@ footer a:active {
 
 @media (min-width: 1120px) {
   #news {
-    padding-top: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
   }
   #news button {
     display: block;

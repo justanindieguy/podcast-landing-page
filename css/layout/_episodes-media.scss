@@ -6,6 +6,10 @@
     .grid {
       gap: 50px;
     }
+
+    iframe {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -16,14 +20,14 @@
     .grid {
       gap: 20px;
     }
+
+    iframe {
+      margin-bottom: 0;
+    }
   }
 }
 
 #episodes {
-  iframe {
-    margin-bottom: 0;
-  }
-
   .grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
