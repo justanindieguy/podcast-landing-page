@@ -269,6 +269,10 @@ nav li {
   opacity: 100%;
 }
 
+#home #desktop-text {
+  display: none;
+}
+
 #home #strike {
   text-decoration: line-through;
 }
@@ -415,11 +419,17 @@ footer a:active {
     margin-bottom: 0;
   }
   #home p {
-    width: 628px;
+    width: 700px;
     margin-bottom: 75px;
   }
   #home .button {
     width: 226px;
+  }
+  #home #mobile-text {
+    display: none;
+  }
+  #home #desktop-text {
+    display: inline;
   }
   #home #break {
     display: inline;

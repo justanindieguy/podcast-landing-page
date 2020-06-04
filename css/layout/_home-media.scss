@@ -9,12 +9,20 @@
     }
 
     p {
-      width: 628px;
+      width: 700px;
       margin-bottom: 75px;
     }
 
     .button {
       width: 226px;
+    }
+
+    #mobile-text {
+      display: none;
+    }
+
+    #desktop-text {
+      display: inline;
     }
 
     #break {
