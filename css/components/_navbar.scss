@@ -24,14 +24,6 @@ nav {
     margin-bottom: 4px;
   }
 
-  #bar-center {
-    top: 22px;
-  }
-
-  #bar-bottom {
-    top: 29px;
-  }
-
   img {
     display: block;
     width: 30px;
@@ -81,7 +73,7 @@ nav {
   top: 50px;
 
   & {
-    animation: 0.5s linear expand;
+    animation: 0.4s linear expand;
   }
 
   li {
@@ -102,23 +94,46 @@ nav {
   }
 }
 
+#toggle ~ #bar-top {
+  & {
+    transform: rotate(0) translate(0, 0);
+    transition: transform 0.4s linear;
+  }
+}
+
+#toggle ~ #bar-center {
+  & {
+    transform: translateX(0);
+    transition: transform 0.4s linear;
+    top: 22px;
+  }
+}
+
+#toggle ~ #bar-bottom {
+  & {
+    transform: rotate(0) translate(0, 0);
+    transition: transform 0.4s linear;
+    top: 29px;
+  }
+}
+
 #toggle:checked ~ #bar-top {
   & {
-    animation: 0.5s linear bar-top-move;
     transform: rotate(45deg) translate(5px, 5px);
+    transition: transform 0.4s linear;
   }
 }
 
 #toggle:checked ~ #bar-center {
   & {
-    animation: 0.5s linear disappear;
     transform: translateX(50px);
+    transition: transform 0.4s linear;
   }
 }
 
 #toggle:checked ~ #bar-bottom {
   & {
-    animation: 0.5s linear bar-bottom-move;
     transform: rotate(-45deg) translate(5px, -5px);
+    transition: transform 0.4s linear;
   }
 }
