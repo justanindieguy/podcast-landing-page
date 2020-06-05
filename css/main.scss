@@ -1,19 +1,24 @@
-// Base styles.
-@import "base/variables";
+//Abstracts: Variables, Media Mixins and Keyframes.
+@import "abstracts/variables";
+@import "abstracts/media-mixins";
+@import "abstracts/keyframes";
+
+// Base styles, these are the original mobile styles.
 @import "base/base-layout";
+@import "base/about";
+@import "base/episodes";
+@import "base/guests";
+@import "base/home";
+@import "base/news";
+@import "base/topics";
 
-// Styles for each component.
+// Styles for all components.
 @import "components/navbar";
-@import "components/home";
-@import "components/episodes";
-@import "components/about";
-@import "components/guests";
-@import "components/topics";
-@import "components/news";
+@import "components/button";
 @import "components/footer";
+@import "components/section";
 
-// Media Queries.
-@import "base/media-mixins";
+// Media version for each section.
 @import "layout/base-media";
 @import "layout/nav-media";
 @import "layout/home-media";
@@ -23,6 +28,3 @@
 @import "layout/topics-media";
 @import "layout/news-media";
 @import "layout/footer-media";
-
-// Animations.
-@import "abstracts/keyframes";

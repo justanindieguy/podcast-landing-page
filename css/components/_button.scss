@@ -1,0 +1,36 @@
+%button {
+  background-color: $button-color;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-family: $body-font;
+  font-size: 18px;
+  font-weight: 600;
+  height: 48px;
+  width: 100%;
+}
+
+%button-hover {
+  animation: 0.3s linear button-hover;
+  animation-fill-mode: forwards;
+  background: $hover-gradient;
+}
+
+button {
+  @extend %button;
+}
+
+button:hover {
+  @extend %button-hover;
+}
+
+.button {
+  @extend %button;
+  text-align: center;
+  line-height: 48px;
+}
+
+.button:hover {
+  @extend %button-hover;
+  text-decoration: none;
+}

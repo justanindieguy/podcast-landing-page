@@ -7,3 +7,23 @@
     height: 252px;
   }
 }
+
+@keyframes contract {
+  from {
+    height: 252px;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+@keyframes button-hover {
+  from {
+    color: black;
+  }
+
+  to {
+    color: white;
+  }
+}

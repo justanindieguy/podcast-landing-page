@@ -1,0 +1,12 @@
+section {
+  padding: 0 5%;
+
+  p {
+    line-height: 30px;
+  }
+}
+
+.colored-section {
+  background: $blue-gradient;
+  color: white;
+}

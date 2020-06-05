@@ -38,46 +38,7 @@ a:active {
   text-decoration: line-through;
 }
 
-%button {
-  background-color: $button-color;
-  border: none;
-  cursor: pointer;
-  display: block;
-  font-family: $body-font;
-  font-size: 18px;
-  font-weight: 600;
-  height: 48px;
-  width: 100%;
-}
-
-button {
-  @extend %button;
-}
-
-button:hover {
-  background: $hover-gradient;
-  color: white;
-}
-
-section {
-  padding: 0 5%;
-
-  p {
-    line-height: 30px;
-  }
-}
-
-.colored-section {
-  background: $blue-gradient;
-}
-
 img {
-  width: 100%;
-}
-
-iframe {
-  border: none;
-  height: 232px;
   width: 100%;
 }
 
@@ -85,6 +46,8 @@ iframe {
   display: block;
 }
 
-.colored-section {
-  color: white;
+iframe {
+  border: none;
+  height: 232px;
+  width: 100%;
 }

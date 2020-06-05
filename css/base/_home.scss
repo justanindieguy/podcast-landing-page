@@ -2,18 +2,6 @@
   margin-top: 50px;
   padding-top: 10px;
 
-  .button {
-    @extend %button;
-    text-align: center;
-    line-height: 48px;
-  }
-
-  .button:hover {
-    background: $hover-gradient;
-    color: white;
-    text-decoration: none;
-  }
-
   .button:active {
     opacity: 100%;
   }

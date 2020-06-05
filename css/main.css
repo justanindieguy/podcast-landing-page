@@ -1,3 +1,57 @@
+@-webkit-keyframes expand {
+  from {
+    height: 0;
+  }
+  to {
+    height: 252px;
+  }
+}
+
+@keyframes expand {
+  from {
+    height: 0;
+  }
+  to {
+    height: 252px;
+  }
+}
+
+@-webkit-keyframes contract {
+  from {
+    height: 252px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes contract {
+  from {
+    height: 252px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes button-hover {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes button-hover {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -39,38 +93,12 @@ a:active {
   text-decoration: line-through;
 }
 
-button, #home .button {
-  background-color: #00f3bb;
-  border: none;
-  cursor: pointer;
-  display: block;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 18px;
-  font-weight: 600;
-  height: 48px;
-  width: 100%;
-}
-
-button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#00f0b8), to(#0000fe));
-  background: linear-gradient(90deg, #00f0b8 0%, #0000fe 100%);
-  color: white;
-}
-
-section {
-  padding: 0 5%;
-}
-
-section p {
-  line-height: 30px;
-}
-
-.colored-section {
-  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
-}
-
 img {
   width: 100%;
+}
+
+.block-img {
+  display: block;
 }
 
 iframe {
@@ -79,12 +107,86 @@ iframe {
   width: 100%;
 }
 
-.block-img {
+#about {
+  -webkit-transform: translateY(-70px);
+          transform: translateY(-70px);
+}
+
+#episodes {
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  margin-top: 60px;
+  padding-top: 10%;
+  padding-bottom: 30%;
+}
+
+#episodes .container {
+  -webkit-transform: skewY(5deg);
+          transform: skewY(5deg);
+}
+
+#episodes iframe {
+  margin-bottom: 10px;
+}
+
+#guests {
+  padding: 0;
+}
+
+#guests h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 0 5%;
+}
+
+#home {
+  margin-top: 50px;
+  padding-top: 10px;
+}
+
+#home .button:active {
+  opacity: 100%;
+}
+
+#home #desktop-text {
+  display: none;
+}
+
+#home #strike {
+  text-decoration: line-through;
+}
+
+#home #dot {
+  color: #0000ec;
+}
+
+#home #break {
   display: block;
 }
 
-.colored-section {
-  color: white;
+#news {
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  padding-top: 20px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+#topics div {
+  text-align: center;
+}
+
+#topics h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+#topics img {
+  width: 104px;
+}
+
+#topics .topic {
+  margin-bottom: 80px;
 }
 
 nav {
@@ -163,16 +265,13 @@ nav li {
 }
 
 #toggle:checked ~ .menu {
+  -webkit-animation: 0.4s linear expand;
+          animation: 0.4s linear expand;
   background-color: #0000ec;
   display: block;
   position: absolute;
   left: 0;
   top: 50px;
-}
-
-#toggle:checked ~ .menu {
-  -webkit-animation: 0.4s linear expand;
-          animation: 0.4s linear expand;
 }
 
 #toggle:checked ~ .menu li {
@@ -248,98 +347,34 @@ nav li {
   transition: transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 
-#home {
-  margin-top: 50px;
-  padding-top: 10px;
+button, .button {
+  background-color: #00f3bb;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+  font-weight: 600;
+  height: 48px;
+  width: 100%;
 }
 
-#home .button {
+button:hover, .button:hover {
+  -webkit-animation: 0.3s linear button-hover;
+          animation: 0.3s linear button-hover;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background: -webkit-gradient(linear, left top, right top, from(#00f0b8), to(#0000fe));
+  background: linear-gradient(90deg, #00f0b8 0%, #0000fe 100%);
+}
+
+.button {
   text-align: center;
   line-height: 48px;
 }
 
-#home .button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#00f0b8), to(#0000fe));
-  background: linear-gradient(90deg, #00f0b8 0%, #0000fe 100%);
-  color: white;
+.button:hover {
   text-decoration: none;
-}
-
-#home .button:active {
-  opacity: 100%;
-}
-
-#home #desktop-text {
-  display: none;
-}
-
-#home #strike {
-  text-decoration: line-through;
-}
-
-#home #dot {
-  color: #0000ec;
-}
-
-#home #break {
-  display: block;
-}
-
-#episodes {
-  -webkit-transform: skewY(-5deg);
-          transform: skewY(-5deg);
-  margin-top: 60px;
-  padding-top: 10%;
-  padding-bottom: 30%;
-}
-
-#episodes .container {
-  -webkit-transform: skewY(5deg);
-          transform: skewY(5deg);
-}
-
-#episodes iframe {
-  margin-bottom: 10px;
-}
-
-#about {
-  -webkit-transform: translateY(-70px);
-          transform: translateY(-70px);
-}
-
-#guests {
-  padding: 0;
-}
-
-#guests h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  padding: 0 5%;
-}
-
-#topics div {
-  text-align: center;
-}
-
-#topics h3 {
-  font-size: 24px;
-  font-weight: 800;
-}
-
-#topics img {
-  width: 104px;
-}
-
-#topics .topic {
-  margin-bottom: 80px;
-}
-
-#news {
-  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-  padding-top: 20px;
-  padding-bottom: 50px;
-  text-align: center;
 }
 
 footer {
@@ -357,6 +392,19 @@ footer a:hover {
 
 footer a:active {
   text-decoration: none;
+}
+
+section {
+  padding: 0 5%;
+}
+
+section p {
+  line-height: 30px;
+}
+
+.colored-section {
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  color: white;
 }
 
 @media (min-width: 1120px) {
@@ -578,24 +626,6 @@ footer a:active {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-}
-
-@-webkit-keyframes expand {
-  from {
-    height: 0;
-  }
-  to {
-    height: 252px;
-  }
-}
-
-@keyframes expand {
-  from {
-    height: 0;
-  }
-  to {
-    height: 252px;
   }
 }
 /*# sourceMappingURL=main.css.map */
