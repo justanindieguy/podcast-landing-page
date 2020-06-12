@@ -9,8 +9,6 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
-  width: 100%;
   z-index: 1;
 
   span {
@@ -18,10 +16,9 @@ nav {
     display: block;
     height: 3px;
     width: 25px;
-    position: fixed;
     top: 15px;
     right: 17px;
-    margin-bottom: 4px;
+    position: fixed;
   }
 
   img {
@@ -35,7 +32,7 @@ nav {
     font-size: 25px;
   }
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     appearance: none;
     cursor: pointer;
     display: block;
@@ -47,7 +44,7 @@ nav {
     z-index: 1;
   }
 
-  input[type="checkbox"]:focus {
+  input[type='checkbox']:focus {
     outline: 0;
   }
 
@@ -67,12 +64,12 @@ nav {
 
 #toggle:checked ~ .menu {
   & {
-    animation: 0.4s linear expand;
     background-color: $blue-highlight;
     display: block;
     position: absolute;
     left: 0;
     top: 50px;
+    height: 252px;
   }
 
   li {

@@ -1,19 +1,19 @@
 %button {
   background-color: $button-color;
   border: none;
+  color: black;
   cursor: pointer;
   display: block;
-  font-family: $body-font;
   font-size: 18px;
   font-weight: 600;
   height: 48px;
   width: 100%;
+  transition: color 0.8s;
 }
 
 %button-hover {
-  animation: 0.3s linear button-hover;
-  animation-fill-mode: forwards;
   background: $hover-gradient;
+  color: white;
 }
 
 button {

@@ -1,14 +1,15 @@
 #episodes {
-  transform: skewY(-5deg);
+  clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
   margin-top: 60px;
   padding-top: 10%;
   padding-bottom: 30%;
 
-  .container {
-    transform: skewY(5deg);
-  }
-
   iframe {
     margin-bottom: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }

@@ -1,30 +1,31 @@
+@import 'vendors/normalize';
+
 //Abstracts: Variables, Media Mixins and Keyframes.
-@import "abstracts/variables";
-@import "abstracts/media-mixins";
-@import "abstracts/keyframes";
+@import 'abstracts/variables';
+@import 'abstracts/media-mixins';
 
 // Base styles, these are the original mobile styles.
-@import "base/base-layout";
-@import "base/about";
-@import "base/episodes";
-@import "base/guests";
-@import "base/home";
-@import "base/news";
-@import "base/topics";
+@import 'base/base-layout';
+@import 'base/about';
+@import 'base/episodes';
+@import 'base/guests';
+@import 'base/home';
+@import 'base/news';
+@import 'base/topics';
 
 // Styles for all components.
-@import "components/navbar";
-@import "components/button";
-@import "components/footer";
-@import "components/section";
+@import 'components/navbar';
+@import 'components/button';
+@import 'components/footer';
+@import 'components/section';
 
 // Media version for each section.
-@import "layout/base-media";
-@import "layout/nav-media";
-@import "layout/home-media";
-@import "layout/episodes-media";
-@import "layout/about-media";
-@import "layout/guests-media";
-@import "layout/topics-media";
-@import "layout/news-media";
-@import "layout/footer-media";
+@import 'layout/base-media';
+@import 'layout/nav-media';
+@import 'layout/home-media';
+@import 'layout/episodes-media';
+@import 'layout/about-media';
+@import 'layout/guests-media';
+@import 'layout/topics-media';
+@import 'layout/news-media';
+@import 'layout/footer-media';
