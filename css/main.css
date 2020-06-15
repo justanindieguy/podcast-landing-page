@@ -391,7 +391,7 @@ img {
 }
 
 #about article {
-  text-align: justify;
+  text-align: left;
 }
 
 #episodes {
@@ -760,6 +760,12 @@ section p {
   }
   #home #break {
     display: inline;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1119px) {
+  #home .button {
+    width: 226px;
   }
 }
 

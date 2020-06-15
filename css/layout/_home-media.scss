@@ -30,3 +30,11 @@
     }
   }
 }
+
+@include for-tablet {
+  #home {
+    .button {
+      width: 226px;
+    }
+  }
+}
